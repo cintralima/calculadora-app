@@ -1,28 +1,28 @@
-<form class="calculator">
+<form class="calculator" #calculatorForm>
   <div class="design-close-exit">
     <div class="circle red"></div>
     <div class="circle yellow"></div>
     <div class="circle green"></div>
   </div>
-  <input type="text" placeholder="0" readonly />
-  <div class="calculator-button">
-    <button class="button clear-btn grey-dark">AC</button>
-    <button class="button rem-digit-btn grey-dark">DEL</button>
-    <button value="/" class="button oper-btn grey-dark">/</button>
-    <button value="*" class="button oper-btn orange">x</button>
-    <button value="7" class="button num-btn">7</button>
-    <button value="8" class="button num-btn">8</button>
-    <button value="9" class="button num-btn">9</button>
-    <button value="-" class="button oper-btn orange">-</button>
-    <button value="4" class="button num-btn">4</button>
-    <button value="5" class="button num-btn">5</button>
-    <button value="6" class="button num-btn">6</button>
-    <button value="+" class="button oper-btn orange">+</button>
-    <button value="1" class="button num-btn">1</button>
-    <button value="2" class="button num-btn">2</button>
-    <button value="3" class="button num-btn">3</button>
-    <button class="button calc-btn orange">=</button>
-    <button value="0" class="button num-btn">0</button>
-    <button class="button decimal-btn">.</button>
+  <input type="text" placeholder="0" readonly #input />
+  <div class="calculator-button" #calculatorButtons>
+    <button (click)="clear()" class="button clear-btn grey-dark">AC</button>
+    <button  (click)="backspace()"class="button rem-digit-btn grey-dark">DEL</button>
+    <button (click)="insertChar('/')" class="button oper-btn grey-dark">/</button>
+    <button (click)="insertChar('*')" class="button oper-btn orange">x</button>
+    <button (click)="insertChar('7')" class="button num-btn">7</button>
+    <button (click)="insertChar('8')" class="button num-btn">8</button>
+    <button (click)="insertChar('9')" class="button num-btn">9</button>
+    <button (click)="insertChar('-')" class="button oper-btn orange">-</button>
+    <button (click)="insertChar('4')" class="button num-btn">4</button>
+    <button (click)="insertChar('5')" class="button num-btn">5</button>
+    <button (click)="insertChar('6')" class="button num-btn">6</button>
+    <button (click)="insertChar('+')" class="button oper-btn orange">+</button>
+    <button (click)="insertChar('1')" class="button num-btn">1</button>
+    <button (click)="insertChar('2')" class="button num-btn">2</button>
+    <button (click)="insertChar('3')" class="button num-btn">3</button>
+    <button  (click)="calculate()" class="button calc-btn orange">=</button>
+    <button (click)="insertChar('0')" class="button num-btn">0</button>
+    <button  (click)="insertChar('.')" class="button decimal-btn">.</button>
   </div>
 </form>
